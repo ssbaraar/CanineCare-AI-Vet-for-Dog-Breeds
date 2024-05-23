@@ -32,8 +32,8 @@ This project leverages computer vision and machine learning to improve dog care 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-repo/canine-care.git
-    cd canine-care
+    git clone https://github.com/ssbaraar/CanineCare-AI-Vet-for-Dog-Breeds.git
+    cd CanineCare-AI-Vet-for-Dog-Breeds
     ```
 
 2. Create a virtual environment and activate it:
@@ -100,5 +100,20 @@ This project leverages computer vision and machine learning to improve dog care 
     }
     ```
 
+## File Structure
+
+│
+├── app.py # Main Flask application
+├── model/
+│   ├── 20220804-16551659632113-all-images-Adam.h5 # TensorFlow model
+│   └── dogModel1.pkl # Scikit-learn model
+├── data/
+│   └── dog_data_09032022.csv # Data file for preprocessing
+├── templates/
+│   └── Home.html # HTML template for the home page
+├── static/
+│   └── style.css # CSS file for styling
+├── requirements.txt # List of Python dependencies
+└── README.md # Project documentation
 
 
