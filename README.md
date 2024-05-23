@@ -101,4 +101,30 @@ This project leverages computer vision and machine learning to improve dog care 
     ```
 
 ## File Structure
+canine-care/
+│
+├── app.py # Main Flask application
+├── model/
+│ ├── 20220804-16551659632113-all-images-Adam.h5 # TensorFlow model
+│ └── dogModel1.pkl # Scikit-learn model
+├── data/
+│ └── dog_data_09032022.csv # Data file for preprocessing
+├── templates/
+│ └── Home.html # HTML template for the home page
+├── static/
+│ └── style.css # CSS file for styling
+├── requirements.txt # List of Python dependencies
+└── README.md # Project documentation
+
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+
+
 
