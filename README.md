@@ -81,7 +81,7 @@ This project leverages computer vision and machine learning to improve dog care 
 
 ![Dog Recommendation Page](/sample/recomm.png)
 
-[Results](/sample/resultsr.png)
+![Results](/sample/resultsr.png)
 
 
 ### Predict Disease Page
