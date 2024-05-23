@@ -14,13 +14,11 @@ import joblib  # For loading the trained model
 
 app = Flask(__name__)
 
-#############################DONT TOUCH THIS################################################
-# Load the machine learning model
+# Load the machine learning model for breed classification
 path = 'model/20220804-16551659632113-all-images-Adam.h5'
 custom_objects = {'KerasLayer': hub.KerasLayer}
 with tf.keras.utils.custom_object_scope(custom_objects):
     model = tf.keras.models.load_model(path)
-#############################DONT TOUCH THIS################################################
 
 # Load the model (ensure the path to your model file is correct)
 # TensorFlow model
