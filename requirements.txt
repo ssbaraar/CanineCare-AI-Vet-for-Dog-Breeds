@@ -1,0 +1,8 @@
+tensorflow == 2.15.0
+opencv-python<=4.9.0.80
+#tf_keras
+numpy<=1.26.4
+flask<=3.0.3
+pandas~=2.2.2
+scikit-learn<=1.2.2
+joblib<=1.4.0

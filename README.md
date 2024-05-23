@@ -1,0 +1,2 @@
+# CanineCare - AI Vet For Dog Breeds
+ This repository explores using computer vision and machine learning to improve dog care. It includes tools for identifying dog breeds from images, predicting diseases, and recommending the best breed for potential owners. By analyzing images and data, these tools help veterinarians provide better care and help people choose the right dog for their lifestyle, ensuring healthier and happier dogs and owners.
