@@ -63,6 +63,23 @@ This project leverages computer vision and machine learning to improve dog care 
 
 2. Open your web browser and navigate to `http://127.0.0.1:5000/`.
 
+## Screenshots
+
+### Home Page
+![Home Page](sample/HomePage.png)
+![Services Page](sample/Services.png)
+
+### Predict Dog Breed Page
+![Classification Page](sample/classify.png)
+![Classification results of Dog Breed](/sample/resultsc.png)
+![Dog Recommendation Page](/sample/recomm.png)
+1[Results](/sample/resultsr.png)
+
+
+### Predict Disease Page
+![Predict Disease](sample/disease.png)
+![Results](/sample/resultsp.png)
+
 ## Endpoints
 
 ### Home
