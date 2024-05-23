@@ -66,18 +66,27 @@ This project leverages computer vision and machine learning to improve dog care 
 ## Screenshots
 
 ### Home Page
+
 ![Home Page](sample/HomePage.png)
+
 ![Services Page](sample/Services.png)
 
-### Predict Dog Breed Page
+### Dog Breed Classification Page
+
 ![Classification Page](sample/classify.png)
+
 ![Classification results of Dog Breed](/sample/resultsc.png)
+
+### Dog Breed Recommendation Page
+
 ![Dog Recommendation Page](/sample/recomm.png)
-1[Results](/sample/resultsr.png)
+
+[Results](/sample/resultsr.png)
 
 
 ### Predict Disease Page
 ![Predict Disease](sample/disease.png)
+
 ![Results](/sample/resultsp.png)
 
 ## Endpoints
