@@ -101,7 +101,7 @@ This project leverages computer vision and machine learning to improve dog care 
     ```
 
 ## File Structure
-
+```
 │
 ├── app.py # Main Flask application
 ├── model/
@@ -115,5 +115,6 @@ This project leverages computer vision and machine learning to improve dog care 
 │   └── style.css # CSS file for styling
 ├── requirements.txt # List of Python dependencies
 └── README.md # Project documentation
+```
 
 
