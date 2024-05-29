@@ -15,10 +15,11 @@ import joblib  # For loading the trained model
 app = Flask(__name__)
 
 # Load the machine learning model for breed classification
+# Load the machine learning model for breed classification
 path = 'model/20220804-16551659632113-all-images-Adam.h5'
 custom_objects = {'KerasLayer': hub.KerasLayer}
 with tf.keras.utils.custom_object_scope(custom_objects):
-    model = tf.keras.models.load_model(path)
+    model = tf.keras.models.load_model(path, custom_objects=custom_objects)
 
 # Load the model (ensure the path to your model file is correct)
 # TensorFlow model
@@ -280,10 +281,4 @@ def predict_disease():
 
 # if __name__ == '__main__':
 if __name__ == '__main__':
-    import sys
-    if len(sys.argv) > 1 and sys.argv[1] == 'freeze':
-        from flask_frozen import Freezer
-        freezer = Freezer(app)
-        freezer.freeze()
-    else:
-        app.run(debug=True)
+    app.run(debug=True)
