@@ -278,5 +278,12 @@ def predict_disease():
 
 
 
+# if __name__ == '__main__':
 if __name__ == '__main__':
-    app.run(debug=True)
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == 'freeze':
+        from flask_frozen import Freezer
+        freezer = Freezer(app)
+        freezer.freeze()
+    else:
+        app.run(debug=True)
