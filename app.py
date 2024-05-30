@@ -200,11 +200,11 @@ def recommend_breed():
                    (watchdog - 1) / 5, (adaptability - 1) / 5, (trainability - 1) / 5,
                    (energy - 1) / 5, (barking - 1) / 5, (mental_stimulation - 1) / 5]
 
-        # Get the recommended breeds
         names, distances = get_names(profile)
 
-        # Convert the data to a list of dictionaries
-        data = [{'name': name, 'similarity': distance} for name, distance in zip(names, distances)]
+        # Generate URLs for each recommended breed
+        base_url = 'https://www.akc.org/dog-breeds/'
+        data = [{'name': name, 'similarity': distance, 'url': base_url + name.lower().replace(' ', '-')} for name, distance in zip(names, distances)]
 
         return jsonify(data)
 
@@ -265,17 +265,26 @@ def predict_disease():
     prediction = joblib_model.predict(input_vector)
     predicted_index = np.argmax(prediction)
 
-    # Mapping of prediction index to disease name
+    # Mapping of prediction index to disease name and URL
     disease_mapping = {
-        0: 'Tick fever', 1: 'Distemper', 2: 'Parvovirus',
-        3: 'Hepatitis', 4: 'Tetanus', 5: 'Chronic kidney Disease',
-        6: 'Diabetes', 7: 'Gastrointestinal Disease', 8: 'Allergies',
-        9: 'Gingitivis', 10: 'Cancers', 11: 'Skin Rashes'
+        0: ('Tick fever', 'https://www.thevetexpert.com/tick-fever-in-dogs-causes-signs-diagnosis-and-treatment/'),
+        1: ('Distemper', 'https://www.akc.org/expert-advice/health/distemper-in-dogs/'),
+        2: ('Parvovirus', 'https://www.akc.org/expert-advice/health/parvovirus-what-puppy-owners-need-to-know/'),
+        3: ('Hepatitis', 'https://vcahospitals.com/know-your-pet/infectious-canine-hepatitis'),
+        4: ('Tetanus', 'https://vcahospitals.com/know-your-pet/tetanus-in-dogs'),
+        5: ('Chronic kidney Disease', 'https://www.petmd.com/dog/conditions/kidney/chronic-renal-failure-dogs'),
+        6: ('Diabetes', 'https://www.petmd.com/dog/conditions/endocrine/c_dg_diabetes_mellitus'),
+        7: ('Gastrointestinal Disease', 'https://www.petmd.com/dog/conditions/digestive/c_multi_gastroenteritis'),
+        8: ('Allergies', 'https://www.petmd.com/dog/general-health/dog-allergies'),
+        9: ('Gingivitis', 'https://www.petmd.com/dog/conditions/mouth/c_dg_gingivitis'),
+        10: ('Cancers', 'https://www.petmd.com/dog/conditions/cancer/c_dg_cancer_general'),
+        11: ('Skin Rashes', 'https://www.petmd.com/dog/general-health/dog-skin-allergies-and-rashes')
     }
-    predicted_disease = disease_mapping.get(predicted_index, "Unknown Disease")
+    predicted_disease, disease_url = disease_mapping.get(predicted_index, ("Unknown Disease", "#"))
 
     # Return the prediction as a JSON response
-    return jsonify(disease=predicted_disease)
+    return jsonify(disease=predicted_disease, url=disease_url)
+
 
 
 
